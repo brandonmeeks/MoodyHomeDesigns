@@ -8,17 +8,13 @@ using System.Text;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
-namespace Moody_Home_Designs_Inventory_Management
-{
-    public partial class Form_newItem : Form
-    {
-        public Form_newItem()
-        {
+namespace Moody_Home_Designs_Inventory_Management {
+    public partial class Form_newItem : Form {
+        public Form_newItem() {
             InitializeComponent();
         }
 
-        private void btn_Save_Click(object sender, EventArgs e)
-        {
+        private void btn_Save_Click(object sender, EventArgs e) {
             //reset label error
             lbl_Error.Text = "";
 
@@ -34,16 +30,14 @@ namespace Moody_Home_Designs_Inventory_Management
              * invalid, display error message using label and prevent database access
              * 
              */
-            try
-            {
+            try {
                 itemName = txtBox_ItemName.Text;
                 details = txtBox_Details.Text;
                 salePrice = Convert.ToDecimal(txtBox_SalePrice.Text);
                 partsCost = Convert.ToDecimal(txtBox_CostOfParts.Text);
                 workHours = Convert.ToInt32(txtBox_WorkHours.Text);
             }
-            catch
-            {
+            catch {
                 lbl_Error.Text = "Data Entry Error. Please verify information.";
                 return;
             }
@@ -52,8 +46,7 @@ namespace Moody_Home_Designs_Inventory_Management
              * If connection or item addition fails, display error message
              * and stop execution of button click code.
              */
-            try
-            {
+            try {
                 SqlConnection dbConnection = new SqlConnection(
                     "Server = localhost; " +
                     "Database = Moody Home Designs; " +
@@ -73,8 +66,7 @@ namespace Moody_Home_Designs_Inventory_Management
                 dbCommand.ExecuteNonQuery();
                 dbConnection.Close();
             }
-            catch
-            {
+            catch {
                 lbl_Error.Text = "Database error";
                 return;
             }
@@ -83,13 +75,11 @@ namespace Moody_Home_Designs_Inventory_Management
 
         }
 
-        private void form_NewItem_FormClosed(object sender, FormClosedEventArgs e)
-        {
+        private void form_NewItem_FormClosed(object sender, FormClosedEventArgs e) {
             Form_home.secondaryWindow = false;
         }
 
-        private void btn_Cancel_Click(object sender, EventArgs e)
-        {
+        private void btn_Cancel_Click(object sender, EventArgs e) {
             this.Close();
         }
     }

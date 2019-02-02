@@ -55,6 +55,12 @@
     <Compile Include="form_NewItem.Designer.cs">
       <DependentUpon>Form_newItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_editItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_editItems.Designer.cs">
+      <DependentUpon>Form_editItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_viewItems.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="form_NewItem.resx">
       <DependentUpon>Form_newItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_editItems.resx">
+      <DependentUpon>Form_editItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_viewItems.resx">
       <DependentUpon>Form_viewItems.cs</DependentUpon>

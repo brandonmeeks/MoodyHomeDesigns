@@ -67,7 +67,7 @@
             this.btn_ViewItems.BackColor = System.Drawing.Color.MidnightBlue;
             this.btn_ViewItems.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_ViewItems.ForeColor = System.Drawing.Color.White;
-            this.btn_ViewItems.Location = new System.Drawing.Point(242, 142);
+            this.btn_ViewItems.Location = new System.Drawing.Point(127, 142);
             this.btn_ViewItems.Name = "btn_ViewItems";
             this.btn_ViewItems.Size = new System.Drawing.Size(109, 38);
             this.btn_ViewItems.TabIndex = 3;
@@ -80,12 +80,13 @@
             this.btn_EditItem.BackColor = System.Drawing.Color.MidnightBlue;
             this.btn_EditItem.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_EditItem.ForeColor = System.Drawing.Color.White;
-            this.btn_EditItem.Location = new System.Drawing.Point(127, 142);
+            this.btn_EditItem.Location = new System.Drawing.Point(242, 142);
             this.btn_EditItem.Name = "btn_EditItem";
             this.btn_EditItem.Size = new System.Drawing.Size(109, 38);
             this.btn_EditItem.TabIndex = 4;
             this.btn_EditItem.Text = "Edit Item";
             this.btn_EditItem.UseVisualStyleBackColor = false;
+            this.btn_EditItem.Click += new System.EventHandler(this.btn_EditItem_Click);
             // 
             // btn_NewOrder
             // 
@@ -104,7 +105,7 @@
             this.btn_EditOrder.BackColor = System.Drawing.Color.MidnightBlue;
             this.btn_EditOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_EditOrder.ForeColor = System.Drawing.Color.White;
-            this.btn_EditOrder.Location = new System.Drawing.Point(127, 186);
+            this.btn_EditOrder.Location = new System.Drawing.Point(242, 186);
             this.btn_EditOrder.Name = "btn_EditOrder";
             this.btn_EditOrder.Size = new System.Drawing.Size(109, 38);
             this.btn_EditOrder.TabIndex = 6;
@@ -116,7 +117,7 @@
             this.btn_ViewOrders.BackColor = System.Drawing.Color.MidnightBlue;
             this.btn_ViewOrders.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_ViewOrders.ForeColor = System.Drawing.Color.White;
-            this.btn_ViewOrders.Location = new System.Drawing.Point(242, 186);
+            this.btn_ViewOrders.Location = new System.Drawing.Point(127, 186);
             this.btn_ViewOrders.Name = "btn_ViewOrders";
             this.btn_ViewOrders.Size = new System.Drawing.Size(109, 38);
             this.btn_ViewOrders.TabIndex = 7;

@@ -9,16 +9,16 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 
 namespace Moody_Home_Designs_Inventory_Management {
-    public partial class Form_viewItems : Form {
-        public Form_viewItems() {
+    public partial class Form_editItems : Form {
+        public Form_editItems() {
             InitializeComponent();
         }
 
-        private void Form_viewItems_FormClosed(object sender, FormClosedEventArgs e) {
+        private void Form_editItems_FormClosed(object sender, FormClosedEventArgs e) {
             Form_home.secondaryWindow = false;
         }
 
-        private void Form_viewItems_Shown(object sender, EventArgs e) {
+        private void Form_editItems_Shown(object sender, EventArgs e) {
             //connect to database and populate listbox with names of items stored in "Item" table
             try {
                 SqlConnection dbConnection = new SqlConnection(
@@ -74,6 +74,10 @@ namespace Moody_Home_Designs_Inventory_Management {
                 lbl_Error.Text = "Database error";
                 return;
             }
+        }
+
+        private void btn_SaveItem_Click(object sender, EventArgs e) {
+            
         }
     }
 }
